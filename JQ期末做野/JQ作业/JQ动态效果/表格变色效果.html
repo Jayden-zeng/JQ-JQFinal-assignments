@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.7.1.min.js">
+					
+		</script>
+	</head>
+	<script  type="text/javascript">
+		$().ready(function(){
+		$('table tbody tr:even').css("background-color","gold");
+		$('table tbody tr:odd').css("background-color","yellowgreen");
+					
+		$('#table1 tbody tr:even').css("background-color","gold");
+		$('#table1 tbody tr:odd').css("background-color","yellowgreen");
+		$('#table2 tbody tr:even').css("background-color","pink");
+		$('#table2 tbody tr:odd').css("background-color","blue");
+					
+		$('#table3 tbody td:even').css("background-color","gold");
+		$('#table3 tbody td:odd').css("background-color","yellowgreen");
+		$('#table4 tbody td:even').css("background-color","pink");
+		$('#table4 tbody td:odd').css("background-color","blue");
+					
+		$('#table5 tbody tr').find('td:even').css("background-color","gold");
+		$('#table5 tbody tr').find('td:odd').css("background-color","yellowgreen");
+		$('#table6 tbody tr').find('td:even').css("background-color","gold");
+		$('#table6 tbody tr').find('td:odd').css("background-color","yellowgreen");
+		});
+				
+	</script>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table1">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table2">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table3">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table4">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table5">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+		<table id="table6">
+			<thead>
+				<tr>
+					<td>技能</td>
+					<td>学习时间</td>
+					<td>熟练程度</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PHP</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Mysql</td>
+					<td>3年</td>
+					<td>熟练</td>
+				</tr>
+				<tr>
+					<td>Jquery</td>
+					<td>1年</td>
+					<td>一般</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td>2年</td>
+					<td>一般</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

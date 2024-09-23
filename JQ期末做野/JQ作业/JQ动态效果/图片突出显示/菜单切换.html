@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Menu switching</title>
+		<link rel="stylesheet" href="css/Menu switching.css"/>
+	</head>
+	<body>
+		<div class="tabBox" id="tabBox">
+			<ul>
+				<li class="active">菜单一</li>
+				<li>菜单二</li>
+				<li>菜单三</li>
+			</ul>
+			<div class="active">内容一</div>
+			<div>内容二</div>
+			<div>内容三</div>
+		</div>
+		</body>
+		<script>
+		var tabBox = document.getElementById('tabBox');
+		var tabList = tabBox.getElementsByTagName('li');
+		var divList = tabBox.getElementsByTagName('div');
+		for (var i = 0; i < tabList.length; i++) {
+			tabList[i].onclick = function (i) {
+				return function () {
+					changeTab(i);
+				}
+			}(i);
+		}
+		function changeTab(n) {
+			for (var i = 0; i < tabList.length; i++) {
+				tabList[i].className = '';
+				divList[i].className = '';
+			}
+			tabList[n].className = 'active';
+			divList[n].className = 'active';
+		}
+		</script>
+</html>

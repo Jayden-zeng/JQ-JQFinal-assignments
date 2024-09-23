@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="javascript:" class="comment">
+        <p>请对以下作品选择:</p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">死神</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">火影忍者</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">海贼王</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">七龙珠</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">鬼灭之刃</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">进击的巨人</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">全职法师</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">一人之下</label></p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label><input type="checkbox" name="">镇魂街</label></p>
+        <p>&emsp;&emsp;
+            <button id='cheall'>全选</button>
+            <button id='alldc'>全不选</button>
+            <button id='inverse'>反选</button>
+        </p>
+    </form>
+    <script>
+        // 复选框
+        cheall = document.getElementById('cheall');
+        alldc = document.getElementById('alldc');
+        inverse = document.getElementById('inverse');
+        bgm = document.getElementsByTagName('input');
+        cheall.onclick = function () {
+            for (i = 0; i < bgm.length; i++) {
+                bgm[i].checked = true;
+            }
+        }
+        alldc.onclick = function () {
+            for (i = 0; i < bgm.length; i++) {
+                bgm[i].checked = false;
+            }
+        }
+        inverse.onclick = function () {
+            for (i = 0; i < bgm.length; i++) {
+                bgm[i].checked = !bgm[i].checked;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/1.css" type="text/css">
+    <link rel="stylesheet" href="dist/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="header">
+        <div class="header_left">
+            <img src="img/logo.png" />
+            <p>国游现状</p>
+
+        </div>
+        <div class="header_middle">
+            <div class="baidu">
+                <div class="bgDiv">
+                    <input type="text" class="search-input-text" value="" autofocus placeholder="关键词">
+                    <input type="button" value="搜索一下" class="search-input-button" id="btn">
+                    <div class="suggest">
+                        <ul id="search-result">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="logo_pic">
+                <img src="img/logo_1.jpg" />
+                <img src="img/logo_2.jpg" />
+                <img src="img/logo_3.png" />
+            </div>
+        </div>
+
+    </div>
+    <div class="banner">
+        <nav>
+
+            <a href="index-1.html">首页</a>
+
+            <a href="index-2.html">国产游戏</a>
+
+            <a href="index-3.html">海外大作</a>
+
+            <a href="index-4.html">登录与注册</a>
+
+            <a href="index-5.html">填写资料</a>
+
+            <div class="animation start-首页"></div>
+
+        </nav>
+    </div>
+    <div class="main">
+        <div class="shell w">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/a1_1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/a1_2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/a1_3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/a1_4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/a1_5.jpg" alt=""></div>
+
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <!-- 
+        先写新闻
+     -->
+
+        <div class="news w">
+            <p>新闻资讯</p>
+            <img src="img/d_under.jpg" />
+            <div class="text">
+                <img src="img/anews.jpg" />
+                <ul>
+                    <li><img src="img/maohao.png" />
+                        <p>12月22日，据国家新闻出版署网站消息，已起草《网络游戏管理办法
+                            （草案征求意见稿）》，现向社会公开征求意见。</p>
+                    </li>
+                    <li><img src="img/maohao.png" />
+                        <p>《征求意见稿》第十八条表示，限制游戏过度使用和高额消费。网络游戏
+                            不得设置每日登录、首次充值、连续充值等诱导性奖励。</p>
+                    </li>
+                    <li><img src="img/maohao.png" />
+                        <p>网络游戏出版经营单位不得以炒作、拍卖等形式提供或纵容虚拟道具高价交易行为。所有网络游戏须设置用户充值限额，并予以公示</p>
+                    </li>
+                    <li>
+                        <img src="img/maohao.png" />
+                        <p>这件给游戏届造成了不小影响，不知道各位如何看待这个政策，反正在网络上已经炸开锅，
+                            也顺便聊聊这个话题。
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- 右边写网友对此事的评价 
+    左边上加“左右框选择添加”选择对游戏的评价，以及整顿游戏的方法
+    左边下加“动态 添加输入框”，你的更多想法-->
+        <div class="conthird w">
+
+            <div class="c_left">
+                <div class="l_label">
+                    <p>年度中国游戏产业报告</p>
+                    <img src="img/d_under.jpg">
+                </div>
+                <div class="shujv">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>年份</td>
+                                <td>市场规模</td>
+                                <td>增长率</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2003年</td>
+                                <td>13.2亿元</td>
+                                <td>45.8%</td>
+                            </tr>
+                            <tr>
+                                <td>2004年</td>
+                                <td>24.7亿元</td>
+                                <td>47.9%</td>
+                            </tr>
+                            <tr>
+                                <td>2005年</td>
+                                <td>37.7亿元</td>
+                                <td>52.6%</td>
+                            </tr>
+                            <tr>
+                                <td>2006年</td>
+                                <td>65.4亿元</td>
+                                <td>73.5%</td>
+                            </tr>
+                            <tr>
+                                <td>2007年</td>
+                                <td>105.7亿元</td>
+                                <td>61.5%</td>
+                            </tr>
+                            <tr>
+                                <td>2008年</td>
+                                <td>183.8亿元</td>
+                                <td>76.6%</td>
+                            </tr>
+                            <tr>
+                                <td>2009年</td>
+                                <td>256.2亿元</td>
+                                <td>39.4%</td>
+                            </tr>
+                            <tr>
+                                <td>2010年</td>
+                                <td>323.7亿元</td>
+                                <td>26.3%</td>
+                            </tr>
+                            <tr>
+                                <td>2011年</td>
+                                <td>446.1亿元</td>
+                                <td>34%</td>
+                            </tr>
+                            <tr>
+                                <td>2012年</td>
+                                <td>602.8亿元</td>
+                                <td>35.1%</td>
+                            </tr>
+                            <tr>
+                                <td>2013年</td>
+                                <td>831.7亿元</td>
+                                <td>38%</td>
+                            </tr>
+                            <tr>
+                                <td>2014年</td>
+                                <td>1144.8亿元</td>
+                                <td>37.7%</td>
+                            </tr>
+                            <tr>
+                                <td>2015年</td>
+                                <td>1407亿元</td>
+                                <td>22.9%</td>
+                            </tr>
+                            <tr>
+                                <td>2016年</td>
+                                <td>1655.7亿元</td>
+                                <td>17.7%</td>
+                            </tr>
+                            <tr>
+                                <td>2017年</td>
+                                <td>2036.1亿元</td>
+                                <td>23%</td>
+                            </tr>
+                            <tr>
+                                <td>2018年</td>
+                                <td>2144.4亿元</td>
+                                <td>5.3%</td>
+                            </tr>
+                            <tr>
+                                <td>2019年</td>
+                                <td>2308.8亿元</td>
+                                <td>7.7%</td>
+                            </tr>
+                            <tr>
+                                <td>2020年</td>
+                                <td>2786.87亿元</td>
+                                <td>20.71%</td>
+                            </tr>
+                            <tr>
+                                <td>2021年</td>
+                                <td>2786.87亿元</td>
+                                <td>6.4%</td>
+                            </tr>
+                            <tr>
+                                <td>2022年</td>
+                                <td>2658.84亿元</td>
+                                <td>-10.33%</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+                <div class="fenxi">
+                    <span>&nbsp;&nbsp;数据分析</span>
+                    <p>受疫情影响，2022年中国网络游戏市场实际销售收入2658.84亿元，同比下降10.33%，
+                        这是自2014年以来中国移动游戏市场出现首次下降。 </p>
+                    <a>从13.2亿到2658.84亿，中国游戏行业从曾经的一颗小树苗成长为参天大树，
+                        相信在未来，中国游戏产业也将登上另一个新的高峰。
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            <div class="c_right">
+                <div class="r_label">
+                    <div class="la_left">
+                        <p>各抒己见</p>
+                        <img src="img/d_under.jpg" />
+                    </div>
+                </div>
+                <ul class="rrbox">
+                    <li class="rbo">
+                        <img src="img/a3_1.png" />
+                    </li>
+                    <li class="rbo">
+                        <img src="img/a3_2.png" />
+                    </li>
+                    <li class="rbo">
+                        <img src="img/a3_3.png" />
+                    </li>
+                    <li class="rbo">
+                        <img src="img/a3_4.png" />
+                    </li>
+                    <li class="rbo">
+                        <img src="img/a3_5.png" />
+                    </li>
+                    <li class="rbo">
+                        <img src="img/a3_6.png" />
+                    </li>
+                    <!--  -->
+                    <!-- 在左边加动态输入框
+    用来写自己的评论
+    -->
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 写杭州亚运会
+                杭州亚运新篇章：游戏电竞，正式登台
+                2023年，杭州第19届亚运会已然声势浩荡地拉开了帷幕，而此次盛会将会带来一场革命性的变化——游戏电竞首次被纳入
+                正式比赛项目。这是对电竞发展的一种肯定，也是对新兴体育形式的尊重。这一刻，让我们一起见证电竞的崛起，展望
+                杭州亚运会的新篇章。
+                一、电竞：从边缘走向主流
+    
+    过去，电竞一直被视为是年轻人的游戏，不被主流社会所认可。然而，随着科技的发展，电竞逐渐壮大并被越来越多的人所接受。如今，
+    它已经成为一项全球性的竞技运动，吸引着来自世界各地的顶级选手和观众。
+            二、电竞入亚：打破传统，拥抱未来
+    
+    2023年杭州亚运会，组委会决定将游戏电竞纳入正式比赛项目，这是对电竞行业的最大认可。这不仅会吸引全球电竞爱好者的目光，
+    也将进一步推动电竞行业的发展。传统与现代的碰撞，让我们看到了体育精神的包容性和前瞻性。
+    三、电竞的国际影响力
+    
+    电竞的国际影响力日益凸显，各国选手在国际电竞赛事中争相斗艳。此次杭州亚运会，将会成为展现电竞魅力的最佳平台。亚洲以及
+    其他地区的电竞选手将同台竞技，展现高超的技艺和团队协作，进一步推动电竞在全球范围内的发展。
+    七、挑战与机遇并存
+    
+    虽然电竞的崛起为亚运会带来了诸多机遇，但也存在一些挑战。如何制定公平的竞赛规则、确保比赛的公正性和安全性、以及在
+    各国之间协调技术和设备标准等问题需要得到解决。然而，这些挑战也为亚运会组委会提供了展示智慧和能力的机会。
+    八、展望未来
+    
+    随着科技的不断进步和全球竞技舞台的创新发展，我们有理由相信，电竞将在未来发挥更加重要的作用。通过本次亚运会的有益
+    尝试，我们将为电竞产业的进一步繁荣奠定基础，同时引领全球体育赛事走向数字化、年轻化、可持续发展的新时代。
+2023年杭州第19届亚运会将迎来一个崭新的篇章——游戏电竞正式登上亚运舞台。这不仅是对电竞发展的肯定，更是对新兴体育形式
+的尊重。让我们共同期待这场融合了传统与现代、科技与竞技的体育盛宴，共同见证电竞辉煌的未来！ #杭州亚运会#-->
+
+
+        <div class="news_one w">
+            <div class="news_title">
+                <p>杭州亚运新篇章：游戏电竞，正式登台</p>
+                <img src="img/d_under.jpg">
+            </div>
+            <div class="boxes_one">
+                <div class="box_one">
+                    <img src="img/a4_1.webp" />
+                    <p>2023年杭州亚运会，组委会决定将游戏电竞纳入正式比赛项目</p>
+                </div>
+                <div class="box_two">
+                    <img src="img/a4_2.webp" />
+                    <p>恭喜!中国队战胜马来西亚队,摘得亚运电竞项目第一枚金牌</p>
+                </div>
+                <div class="box_three">
+                    <img src="img/a4_3.jpg" />
+                    <p>2023年，杭州第19届亚运会已然声势浩荡地拉开了帷幕，</p>
+                </div>
+            </div>
+            <div class="comment_one">
+                <p>&emsp;&emsp;过去，电竞一直被视为是年轻人的游戏，不被主流社会所认可。然而，随着科技的发展，电竞逐渐壮大并被越来越多的人所接受。如今，它已经成为一项全球性的竞技运动，吸引着来自世界各地的顶级选手和观众。
+                </p>
+            </div>
+        </div>
+
+        <div class="situation w">
+            <!-- 分三个纵来写 -->
+            <div class="sititle">
+                <p>游戏产业现状
+                </p>
+                <img src="img/d_under.jpg">
+            </div>
+            <ul class="si_box">
+                <li>
+                    <img src="img/a5_1.png" />
+                    <p>被刻板印象压得无法抬头</p>
+                    <a>人们总是诟病于游戏的危害，片面地看待游戏，殊不知游戏只是无辜的替罪羊</a>
+                </li>
+                <li>
+                    <img src="img/a5_2.png" />
+                    <p>疫情爆发带来的低迷潮</p>
+                    <a>疫情过后整体经济呈现下滑状态，人们消费能力显著降低，产品难以卖得出去。</a>
+                </li>
+                <li>
+                    <img src="img/a5_3.png" />
+                    <p>前景无限未来可期</p>
+                    <a>游戏行业是一个充满机遇和挑战的行业，对于有志于从事游戏行业的人来说，未来仍然具有非常广阔的发展前景。</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>友情链接links<span>合作伙伴</span></p>
+        <ul class="fer_test">
+            <li>
+                <a href="">哔哩哔哩</a>
+            </li>
+            <li>
+                <a href="">淘宝</a>
+            </li>
+            <li>
+                <a href="">京东</a>
+            </li>
+            <li>
+                <a href="">闲鱼</a>
+            </li>
+            <li>
+                <a href="">拼多多</a>
+            </li>
+            <li>
+                <a href="">微信</a>
+            </li>
+            <li>
+                <a href="">QQ</a>
+            </li>
+            <li>
+                <a href="">抖音</a>
+            </li>
+
+        </ul>
+
+        <ul class="fer_tend">
+            <p>帮助中心</p>
+            <li>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+                <a href="#">联系我们</a>
+            </li>
+
+        </ul>
+        <ul class="fer_ri">
+            <li>
+                <img src="img/partner_1.jpg" />
+            </li>
+            <li>
+                <img src="img/partner_2.jpg" />
+            </li>
+            <li>
+                <img src="img/partner_3.webp" />
+            </li>
+            <li>
+                <img src="img/partner_4.webp" />
+            </li>
+        </ul>
+    </div>
+    <div class="footist">
+        <div class="fst">
+            <a>@ 2008-2023 GUOCHANYOUXI.com,A11 rights
+                reserved.<br />版权所有国产游戏5CP备2016437<br />联系作者QQ:731156254</a>
+
+        </div>
+    </div>
+
+
+    <!-- 图片突出显示给各个游戏用 -->
+    <!-- 全选删除用在登录上 -->
+    <!-- 二级联动框用于补充个人资料 -->
+    <!-- 选项 -->
+
+    <script src="dist/js/swiper-bundle.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+</body>
+<script>
+    // 表格变色
+    $().ready(function () {
+        $('table tbody tr:even').css("background-color", "gold");
+        $('table tbody tr:odd').css("background-color", "yellowgreen");
+
+    });
+
+
+
+    // 轮播图
+    var mySwiper = new Swiper('.swiper', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+
+
+
+</script>
+
+</html>

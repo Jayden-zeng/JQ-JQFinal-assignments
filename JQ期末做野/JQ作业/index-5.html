@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/5.css" type="text/css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_left">
+            <img src="img/logo.png" />
+            <p>国游现状</p>
+
+        </div>
+        <div class="header_middle">
+            <div class="baidu">
+                <div class="bgDiv">
+                    <input type="text" class="search-input-text" value="" autofocus placeholder="关键词">
+                    <input type="button" value="搜索一下" class="search-input-button" id="btn">
+                    <div class="suggest">
+                        <ul id="search-result">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="logo_pic">
+                <img src="img/logo_1.jpg" />
+                <img src="img/logo_2.jpg" />
+                <img src="img/logo_3.png" />
+            </div>
+        </div>
+
+    </div>
+    <div class="banner">
+        <nav>
+
+            <a href="index-1.html">首页</a>
+
+            <a href="index-2.html">国产游戏</a>
+
+            <a href="index-3.html">海外大作</a>
+
+            <a href="index-4.html">登录与注册</a>
+
+            <a href="index-5.html">填写资料</a>
+
+            <div class="animation start-首页"></div>
+
+        </nav>
+    </div>
+    <div id="contanier">
+        <div id="content">
+            <table border="1" align="center" cellpadding="0" cellspacing="0" width="70%" height="70%" bgcolor="white">
+                <form method="get" action="#" οnsubmit="return checkForm()">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <font size="5">填写资料</font>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            用户名
+                        </td>
+                        <td>
+                            <input type="text" name="username" id="username" οnfοcus="showTips('username','必须以字母开头')"
+                                οnblur="check('username','用户名不能为空')" /><span id="usernamespan"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码</td>
+                        <td>
+                            <input type="password" name="password" id="password"
+                                οnfοcus="showTips('password','密码长度不能低于6位！')"
+                                οnblur="check('password','密码不能为空！')" /><span id="passwordspan"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码</td>
+                        <td>
+                            <input type="password" name="repassword" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>
+                            <input type="text" name="email" id="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>姓名</td>
+                        <td>
+                            <input type="text" name="name" />
+                        </td>
+                    </tr>
+                    <!--1.编写HTML文件部分的内容-->
+                    <tr>
+                        <td>籍贯</td>
+                        <td>
+                            <!--2.确定事件，通过函数传参的方式拿到改变后的城市-->
+                            <select id="province">
+                                <option>--请选择--</option>
+                            </select>
+                            <select id="city">
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <input type="radio" name="sex" value="男" />男
+                            <input type="radio" name="sex" value="女" />女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期</td>
+                        <td>
+                            <input type="text" name="birthday" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>验证码</td>
+                        <td>
+                            <input type="text" name="yanzhengma" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="注册" />
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jquery.js"></script>
+</body>
+<script>
+    $(function () {
+        //创建一维数组放省份
+        var provinces = ["湖北", "湖南", "河北", "河南"];
+        //创建二维数组用于存储城市
+        var cities = new Array(4);
+        cities[0] = new Array("武汉市", "黄冈市", "襄阳市", "荆州市");
+        cities[1] = new Array("长沙市", "郴州市", "株洲市", "岳阳市");
+        cities[2] = new Array("石家庄市", "邯郸市", "廊坊市", "保定市");
+        cities[3] = new Array("郑州市", "洛阳市", "开封市", "安阳市");
+
+        //初始化第一个下拉框
+        for (var i = 0; i < provinces.length; i++) {
+            var proEle = document.createElement("option");
+            proEle.innerHTML = provinces[i];
+            proEle.index = i;
+            //将option元素节点追加到第一个下拉列表中去
+            $(proEle).appendTo($("#province"));
+        }
+        //添加第一个下拉框的事件
+        $("#province").change(function () {
+            //清除第二个下拉列表的内容
+            $("#city").empty();
+            //获取用户选择的省份
+            var val = this.value;
+            //遍历二维数组中的省份
+            $.each(cities, function (i, n) {
+                //判断用户选择的省份和遍历的省份
+                if (val == provinces[i]) {
+                    //5.遍历该省份下的所有城市
+                    $.each(cities[i], function (j, m) {
+                        //创建城市文本节点
+                        var textNode = document.createTextNode(m);
+                        //创建option元素节点
+                        var opEle = document.createElement("option");
+                        //将城市文本节点添加到option元素节点中去
+                        $(opEle).append(textNode);
+                        //将option元素节点追加到第二个下拉列表中去
+                        $(opEle).appendTo($("#city"));
+                    });
+                }
+            });
+
+        });
+    });
+
+
+
+
+
+
+</script>
+
+</html>

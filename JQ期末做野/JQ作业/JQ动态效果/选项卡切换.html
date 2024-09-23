@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="tabBox" id="tabBox">
+        <ul>
+            <li class="active">动漫</li>
+            <li>作者</li>
+            <li>创作时间</li>
+            <li>类型</li>
+            <li>地区</li>
+        </ul>
+        <div class="active">海贼王</div>
+        <div>尾田荣一郎</div>
+        <div>1997年8月4日</div>
+        <div>少年漫画、冒险</div>
+        <div>日本</div>
+    </div>
+
+</body>
+<script>
+    // 横向选项卡
+    var tabBox = document.getElementById('tabBox');
+    var tabList = tabBox.getElementsByTagName('li');
+    var divList = tabBox.getElementsByTagName('div');
+
+    for (var i = 0; i < tabList.length; i++) {
+        tabList[i].onclick = function (i) {
+            return function () {
+                changeTab(i);
+            }
+        }(i);
+    }
+
+    function changeTab(n) {
+        for (var i = 0; i < tabList.length; i++) {
+            tabList[i].className = '';
+            divList[i].className = '';
+        }
+        tabList[n].className = 'active';
+        divList[n].className = 'active';
+    }
+</script>
+
+</html>

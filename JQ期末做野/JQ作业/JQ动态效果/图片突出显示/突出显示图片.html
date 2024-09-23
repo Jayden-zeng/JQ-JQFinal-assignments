@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        width: 400px;
+        height: 455px;
+        margin: 100px auto;
+		justify-content: space-between;
+		align-items: center;
+      }
+      .container > ul {
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .container > ul > li {
+		flex-basis: 101px;
+        width: 100px;
+        height: 100px;
+		justify-content: space-between;
+      }
+      .container > ul > li > div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+	  .container ul li img{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	  }
+      .container > ul > li:hover {
+		cursor: pointer;
+        filter: brightness(100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><div><img src="img/s01.jpg"/></div></li>
+        <li><div><img src="img/s02.jpg"/></div></li>
+        <li><div><img src="img/s03.jpg"/></div></li>
+        <li><div><img src="img/s04.jpg"/></div></li>
+        <li><div><img src="img/s05.jpg"/></div></li>
+        <li><div><img src="img/s06.jpg"/></div></li>
+        <li><div><img src="img/s07.jpg"/></div></li>
+        <li><div><img src="img/s08.jpg"/></div></li>
+        <li><div><img src="img/s09.jpg"/></div></li>
+      </ul>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+	
+	const images = document.querySelectorAll('.container ul li img');
+	
+	images.forEach(image => {
+	  image.addEventListener('mouseover', () => {
+	    images.forEach(img => img.style.filter = 'brightness(50%)');
+	    image.style.filter = 'brightness(100%)';
+	  });
+	
+	  image.addEventListener('mouseout', () => {
+	    images.forEach(img => img.style.filter = 'brightness(100%)');
+	  });
+	});
+  //    $(".container ul li img").hover(function(){
+		//  $(this).css("opacity","0.6","transition","transform 1s").siblings().css("transition","transform 1s");
+	 // });
+    </script>
+  </body>
+</html>

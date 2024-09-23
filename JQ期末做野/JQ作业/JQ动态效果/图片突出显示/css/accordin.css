@@ -1,0 +1,43 @@
+        *{
+			padding: 0;margin: 0; }
+		body{
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 400px;
+			background-color: #fff;
+		}
+		.shell{
+			width: 90%;height: 700px;display: flex;
+		}
+		.box{
+			box-shadow: 10px 10px 20px rgba(0,0,0,.5);
+			flex: 1;
+			overflow: hidden;
+			transition: .5s;
+			margin: 0 20px;
+			border-radius: 20px;
+			border: 10px solid #fff;
+			background-color: #fff;
+		}
+		.box>img{
+			width: 200%;
+			height: 85%;
+			object-fit: cover;
+			transition: .5s;
+		}
+		.box>span{
+			font: 200 45px;
+			text-align: center;
+			height: 15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box:hover{
+			flex-basis: 40%;
+		}
+		.box:hover>img{
+			width: 100%;height: 100%;
+		}

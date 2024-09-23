@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴导航</title>
+    <style>
+        .menu {
+            width: 800px;
+            background-color: #f2f2f2;
+        }
+
+        .menu ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+            overflow: hidden;
+            /* 新增样式 */
+        }
+
+        .menu li:hover {
+            background-color: #e0e0e0;
+            height: 80px;
+            /* 根据需要调整高度 */
+        }
+
+        .menu li.active {
+            background-color: #b3d9ff;
+            height: 80px;
+            /* 根据需要调整高度 */
+        }
+
+        .submenu {
+            overflow: hidden;
+            height: 0;
+            transition: height 0.3s;
+        }
+
+        .submenu li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu li:nth-child(1):hover .submenu.active {
+            height: auto;
+            display: flex;
+            /* 保留 flex 属性 */
+            flex-direction: column;
+            /* 新增样式 */
+        }
+
+        .menu li:nth-child(1):hover .submenu.active>li {
+            text-align: left;
+
+        }
+
+        .menu li:nth-child(1):hover .submenu.active {
+            background-color: #f2f2f2;
+        }
+
+        .submenu:nth-child(2) {
+            display: none;
+            background: none;
+        }
+
+        .submenu:nth-child(3) {
+            display: none;
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                导航项1
+                <ul class="submenu">
+                    <li>子项1-1</li>
+                    <li>子项1-2</li>
+                    <li>子项1-3</li>
+                </ul>
+            </li>
+            <li>
+                导航项2
+                <ul class="submenu">
+                    <li>子项2-1</li>
+                    <li>子项2-2</li>
+                    <li>子项2-3</li>
+                </ul>
+            </li>
+            <li>
+                导航项3
+                <ul class="submenu">
+                    <li>子项3-1</li>
+                    <li>子项3-2</li>
+                    <li>子项3-3</li>
+                </ul>
+            </li>
+            <li>
+                登录/注册
+                <ul class="submenu">
+                    <li>子项3-1</li>
+                    <li>子项3-2</li>
+                    <li>子项3-3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".menu li:nth-child(1)").mouseenter(function (e) {
+                e.stopPropagation();
+
+                // 打开子菜单
+                $(this).addClass("active").siblings().removeClass("active");
+                $(this).find(".submenu").addClass("active");
+            });
+
+            $(".menu li:not(:nth-child(1))").mouseenter(function (e) {
+                e.stopPropagation();
+
+                // 关闭导航项1的子菜单
+                $(".menu li:nth-child(1)").removeClass("active");
+                $(".menu li:nth-child(1) .submenu").removeClass("active");
+            });
+
+            // 调整高度实现手风琴效果
+            $(".menu li:nth-child(1) .submenu > li").click(function (e) {
+                e.stopPropagation();
+                $(this).addClass("active").siblings().removeClass("active");
+                var curHeight = $(this).height();
+                var autoHeight = $(this).css('height', 'auto').height();
+                $(this).height(curHeight).animate({ height: autoHeight }, 300).siblings().css('height', 0);
+            });
+
+            // 点击页面其他地方收回子菜单
+            $(document).click(function () {
+                $(".menu li:nth-child(1)").removeClass("active");
+                $(".menu li:nth-child(1) .submenu").removeClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

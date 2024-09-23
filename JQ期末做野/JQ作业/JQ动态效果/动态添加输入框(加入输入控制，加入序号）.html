@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="jquery.js"></script>
+    <script>
+		var i=1;
+		$(function(){
+			//添加选项
+			$(".addp").click(function(){
+				if($("#box p").length==6){
+					$("#optips").html("选项个数已经达到最大,不能再添加！");
+					$("#optips").css({"color":"red"});
+				}
+				else{
+					$("#optips").html("");
+					var addPoint=$("#box p").eq(0).clone(true);
+					addPoint.find("span").html(++i);
+					$("#box").append(addPoint);
+				}
+			});
+			//删除选项
+			$("#box .delp").click(function(){
+				if($("#box p").length>1){
+					i=$(this).parent().find("span").html();
+					for(var j=0;j<$(this).parent().nextAll().length;j++){
+						$(this).parent().nextAll().eq(j).find("span").html(i);
+					    i++;
+					}
+					$(this).parent().remove();
+					i--;
+				}
+				else{
+					$("#optips").html("选项个数已经达到最小,不能再删除!");
+					$("#optips").css({"color":"red"});
+				}
+			});
+		});
+    </script>
+</head>
+<body>
+    <button class='addp'>+</button>
+<div id="box">    
+    <p id="pp"> <span>1</span> <input type="text" name="gx"><button class='delp'>-</button> </p>   
+    
+</div>
+    <span id="optips"></span>
+</body>
+</html>
